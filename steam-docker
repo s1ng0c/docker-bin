@@ -8,7 +8,7 @@ hostname="$(hostname --short)"
 self="$(basename "$0")"
 self="${self%-docker}"
 
-home="$HOME/homes/$self"
+home="$HOME/Games/$self"
 args=(
 	--rm
 	--security-opt no-new-privileges

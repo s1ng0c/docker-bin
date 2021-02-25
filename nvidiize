@@ -33,7 +33,7 @@ _detect() {
 	fi
 
 	# if DISPLAY isn't set (or glxinfo is missing), let's fall back to the version of the kernel module loaded (which is more accurate/reliable anyhow :D)
-	if temp="$(export PATH="/sbin:/usr/sbin:/usr/local/sbin:$PATH"; modinfo --field=version nvidia-current 2>/dev/null)" && [ -n "$temp" ]; then
+	if temp="$(export PATH="/sbin:/usr/sbin:/usr/local/sbin:$PATH"; modinfo --field=version nvidia 2>/dev/null)" && [ -n "$temp" ]; then
 		echo "$temp"
 		return 0
 	fi
